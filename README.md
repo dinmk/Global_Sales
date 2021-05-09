@@ -151,6 +151,11 @@ pip install 'apache-airflow[gcp,statsd,sentry]'==1.10.10
 
 
 ## Startup Scripts
+
+Setup Environment variable AIRFLOW_HOME to point to the directory created.  
+Edit the airflow.cfg file to point the sql_alchemy_conn to ./db/airflow.db. 
+Same for the logs
+
 ## Global Store source code
 
 The Source code start from DAG folder - Dependencies are set here 
