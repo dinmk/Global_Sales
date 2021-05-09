@@ -58,7 +58,9 @@ Architecture is quite simple – We have all our script written in python to loa
 file into SQLite DB . We have assumed to run this architecture in our Local machine
 Below architecture diagram describes the simple usage. 
 
-<img width="677" alt="Screenshot 2021-05-09 at 11 26 48" src="https://user-images.githubusercontent.com/61795377/117566887-7f882800-b0b9-11eb-958b-b51c1e3edea7.png">
+
+<img width="401" alt="Screenshot 2021-05-09 at 11 55 45" src="https://user-images.githubusercontent.com/61795377/117567716-9a5c9b80-b0bd-11eb-933b-bfb4802553b0.png">
+
 
 
 ## Tools and Technologies used
