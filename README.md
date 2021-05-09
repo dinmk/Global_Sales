@@ -45,7 +45,12 @@ The value in delivering data warehouse pipelines is in the transforming source d
 ## Architecture
 
 The Setup can work in any Local PC (Windows/Mac) - Tools used are Opensource & free to use. 
+
+Architecture is quite simple – We have all our script written in python to load the CSV
+file into SQLite DB . We have assumed to run this architecture in our Local machine
 Below architecture diagram describes the simple usage. 
+
+
 
 ## Tools and Technologies used
 
