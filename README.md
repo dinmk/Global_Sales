@@ -34,6 +34,14 @@ Use Airflow to author workflows as directed acyclic graphs (DAGs) of tasks. The 
 <a name="conc"/>
 
 ## Getting Started
+
+The purpose of this process is to take a production like source from a sales system and turn it into a data warehouse schema for reporting.  
+Scales for multiple developers as the team grows. 
+Schedules SQL transformation jobs.  
+Handles the complexity of transformations and allows for easier maintenance. 
+Reduces the time to market of producing new additional changes to the model and is sympathetic to the new data sources such as APIs, JSON or CDC from relational database sources.  
+The value in delivering data warehouse pipelines is in the transforming source data using business rules into useful, clean, reliable data and spending a lot of time considering integration complexity
+
 ## Architecture
 ## Tools and Technologies used
 ## Installation setup in Mac/Windows
