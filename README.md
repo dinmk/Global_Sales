@@ -11,15 +11,35 @@ When workflows are defined as code, they become more maintainable, versionable, 
 
 Use Airflow to author workflows as directed acyclic graphs (DAGs) of tasks. The Airflow scheduler executes your tasks on an array of workers while following the specified dependencies. Rich command line utilities make performing complex surgeries on DAGs a snap. The rich user interface makes it easy to visualize pipelines running in production, monitor progress, and troubleshoot issues when needed.
 
-## Table of contents
+## Table of contents 
+[1. Getting Started](#gettingstarted)  
+<a name="gettingstarted"/>
+[2. Architecture](#architecture)  
+<a name="architecture"/>
+[3. Tools and Technologies used](#toolsandtechnology)  
+<a name="toolsandtechnology"/>
+[4. Installation setup in Mac/Windows](#install)  
+<a name="install"/>
+[5. Startup Scripts](#startup)  
+<a name="startup"/>
+[6. Global Store source code](#sourcecode)  
+<a name="sourcecode"/>
+[7. Data Modelling Overview](#dbmodel)  
+<a name="dbmodel"/>
+[8. Running DAG](#dag)  
+<a name="dag"/>
+[9. Report Generation](#report)  
+<a name="report"/>
+[10. Conclusion](#conc)  
+<a name="conc"/>
 
-1.Getting started
-2.Architecture. 
-4.Tools and Technologies used. 
-5.Installation setup in Mac/Windows
-6.Startup Scripts
-7.Global Store source code
-8.Data Modelling Overview
-9.Running DAG
-10.Report Generatiom
-11.Conclusion
+## Getting Started
+## Architecture
+## Tools and Technologies used
+## Installation setup in Mac/Windows
+## Startup Scripts
+## Global Store source code
+## Data Modelling Overview
+## Running DAG
+## Report Generation
+## Conclusion
