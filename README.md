@@ -43,7 +43,20 @@ Reduces the time to market of producing new additional changes to the model and 
 The value in delivering data warehouse pipelines is in the transforming source data using business rules into useful, clean, reliable data and spending a lot of time considering integration complexity
 
 ## Architecture
+
+The Setup can work in any Local PC (Windows/Mac) - Tools used are Opensource & free to use. 
+Below architecture diagram describes the simple usage. 
+
 ## Tools and Technologies used
+
+Apache Airflow  
+Sqlite DB  
+Python  
+Sqlite DB browser  
+Github Desktop  
+Atom - Editor   
+Pycharm   
+
 ## Installation setup in Mac/Windows
 ## Startup Scripts
 ## Global Store source code
