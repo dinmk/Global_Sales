@@ -192,6 +192,8 @@ for row in rows:
         cur.close()
 
 
+cur = con.cursor()
+
 print("9. Sales, Profit and Profit Margin per Month last year")
 
 cur.execute("""select B.tbl_dw_date_dim_month,sum(A.tbl_dw_fact_sales_price) AS  sales,sum(A.tbl_dw_fact_sales_profit) profit,(sum(A.tbl_dw_fact_sales_profit)/sum(A.tbl_dw_fact_sales_price)*100)  profit_margin
@@ -209,6 +211,8 @@ for row in rows:
 
         cur.close()
 
+
+cur = con.cursor()
 
 print("10. Sales per Salesperson measured against their yearly Objectives")
 
