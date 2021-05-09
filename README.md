@@ -39,7 +39,7 @@ Task Instance — stored state of a task.
 [9. Report Generation](#report)  
 <a name="report"/>
 
-## Getting Started
+## 1. Getting Started
 
 The purpose of this process is to take a production like source from a sales system and turn it into a data warehouse schema for reporting.  
 Scales for multiple developers as the team grows. 
@@ -48,7 +48,7 @@ Handles the complexity of transformations and allows for easier maintenance.
 Reduces the time to market of producing new additional changes to the model and is sympathetic to the new data sources such as APIs, JSON or CDC from relational database sources.  
 The value in delivering data warehouse pipelines is in the transforming source data using business rules into useful, clean, reliable data and spending a lot of time considering integration complexity
 
-## Architecture
+## 2. Architecture
 
 The Setup can work in any Local PC (Windows/Mac) - Tools used are Opensource & free to use. 
 
@@ -61,7 +61,7 @@ Below architecture diagram describes the simple usage.
 
 
 
-## Tools and Technologies used
+## 3. Tools and Technologies used
 
 Apache Airflow  
 Sqlite DB  
@@ -71,7 +71,7 @@ Github Desktop
 Atom - Editor   
 Pycharm   
 
-## Installation setup in Mac/Windows
+## 4. Installation setup in Mac/Windows
 
 Step to install airflow on windows without Docker
 
@@ -148,13 +148,14 @@ pip install 'apache-airflow[gcp,statsd,sentry]'==1.10.10
 
 
 
-## Startup Scripts
+## 5. Startup Scripts
 
 Setup Environment variable AIRFLOW_HOME to point to the directory created.  
 Edit the airflow.cfg file to point the sql_alchemy_conn to ./db/airflow.db. 
 Same for the logs
 
-## Global Store source code
+Please refer airflow.cfg in repository which i used
+## 6. Global Store source code
 
 The Source code start from DAG folder - Dependencies are set here 
 Which triggers the following  
@@ -166,7 +167,7 @@ Fact Sales : sqlite_db_fact.py,sqlite_db_report.py
 Reporting Load : sqlite_db_report.py  
 
 
-## Data Modelling Overview
+## 7. Data Modelling Overview
 
 High Level View.  
 
@@ -177,12 +178,12 @@ Data Model.
 <img width="1125" alt="Screenshot 2021-05-09 at 11 31 20" src="https://user-images.githubusercontent.com/61795377/117567000-31275900-b0ba-11eb-9ff0-1f1678dfaa25.png">
 
 
-## Running DAG
+## 8. Running DAG
 
 Click on Trigger DAG in the Airflow webserver  & click on the Tree view to see the Success and failure process.  
 
 <img width="1306" alt="Screenshot 2021-05-09 at 11 33 26" src="https://user-images.githubusercontent.com/61795377/117567054-7186d700-b0ba-11eb-818b-2c1b98b964ae.png">
 
-## Report Generation
+## 9. Report Generation
 
 Required Reporting needs scripts are triggerred at the last can be querried from Sqlite DB browser.
