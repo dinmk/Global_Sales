@@ -1,6 +1,6 @@
 #Author : Dinesh Murugesan (dinesh714@gmail.com)
-# This Script is to import CSV file into Staging table in Database for ETL process
-# Assumption : The input csv file categories.csv & anon_transactions_sample.csv is in same foler
+# This Script is to import CSV/XLSX file into Staging table in Database for ETL process
+# Assumption : The input csv file Global_Superstore_Returns_2016.csv & Global_Superstore_Orders_2016.xlsx is in same foler
 
 import os
 import sqlite3

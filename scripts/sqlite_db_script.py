@@ -1,10 +1,9 @@
 # Author : Dinesh Murugesan (dinesh714@gmail.com)
 # This Script is to create Database for ETL process
-#!/usr/bin/env python3
 import os
 import sqlite3
 
-try:    
+try:
         home_dir = os.environ['AIRFLOW_HOME']
         path = home_dir + ("/db/airflow.db")
         path = path.replace("/","//")

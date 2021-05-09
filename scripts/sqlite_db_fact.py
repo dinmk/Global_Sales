@@ -1,6 +1,5 @@
 #Author : Dinesh Murugesan (dinesh714@gmail.com)
-# This Script is to load staging table to Final table for reporting.
-# Also view creation for extreme reporting
+# This Script is to load Fact table to Final table for reporting.
 import os
 import sqlite3
 home_dir = os.environ['AIRFLOW_HOME']
@@ -19,7 +18,7 @@ cur.execute("""CREATE TABLE IF NOT EXISTS tbl_dw_fact_sales(
         tbl_dw_fact_sales_quantity               integer,
         tbl_dw_fact_sales_discount               decimal,
         tbl_dw_fact_sales_profit                 decimal,
-        tbl_dw_fact_sales_ship_cost              deciaml, 
+        tbl_dw_fact_sales_ship_cost              deciaml,
         tbl_dw_fact_sales_order_prio             varchar,
         tbl_dw_fact_sales_market_key             integer,
         tbl_dw_fact_sales_region                 varchar,
@@ -48,8 +47,8 @@ cur.execute("""INSERT INTO tbl_dw_fact_sales(
                 tbl_dw_fact_sales_market_key            ,
                 tbl_dw_fact_sales_region                ,
                 tbl_dw_fact_sales_return_flag
-                                         ) 
-        SELECT * FROM ( SELECT DISTINCT 
+                                         )
+        SELECT * FROM ( SELECT DISTINCT
         tbl_stg_orders_customer_id         ,
         tbl_stg_orders_product_id          ,
         tbl_stg_orders_order_id            ,

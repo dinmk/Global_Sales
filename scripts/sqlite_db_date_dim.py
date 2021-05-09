@@ -1,6 +1,5 @@
 #Author : Dinesh Murugesan (dinesh714@gmail.com)
-# This Script is to load staging table to Final table for reporting.
-# Also view creation for extreme reporting
+# This Script is to load Dimension table 
 import os
 import sqlite3
 

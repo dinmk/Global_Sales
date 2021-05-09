@@ -1,6 +1,5 @@
 #Author : Dinesh Murugesan (dinesh714@gmail.com)
-# This Script is to load staging table to Final table for reporting.
-# Also view creation for extreme reporting
+# This Script is to load Dimension table
 import os
 import sqlite3
 
@@ -22,11 +21,11 @@ cur.execute("""CREATE TABLE IF NOT EXISTS tbl_dw_customer_dim(
 cur.execute("""INSERT INTO tbl_dw_customer_dim(
         tbl_dw_customer_dim_customer_id   ,
         tbl_dw_customer_dim_segment       ,
-        tbl_dw_customer_dim_customer_name 
-                                         ) 
+        tbl_dw_customer_dim_customer_name
+                                         )
         SELECT DISTINCT tbl_stg_orders_customer_id,
         tbl_stg_orders_segment           ,
-        tbl_stg_orders_customer_name             
+        tbl_stg_orders_customer_name
         FROM tbl_stg_orders
         WHERE TRUE ON CONFLICT(tbl_dw_customer_dim_customer_id) DO UPDATE SET
            tbl_dw_customer_dim_segment =  excluded.tbl_dw_customer_dim_segment ,
