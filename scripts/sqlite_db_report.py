@@ -1,9 +1,12 @@
 # Author : Dinesh Murugesan (dinesh714@gmail.com)
 # This Script is for reporting.
-
+import os
 import sqlite3
 
-con = sqlite3.connect('/Users/dineshmk/airflow_learning/db/airflow.db')
+home_dir = os.environ['AIRFLOW_HOME']
+path = home_dir + ("/db/airflow.db")
+path = path.replace("/","//")
+con = sqlite3.connect(path)
 cur = con.cursor()
 
 print("1. Sales Over Time")

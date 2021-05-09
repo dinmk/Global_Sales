@@ -4,8 +4,11 @@
 import os
 import sqlite3
 
-try:   
-        sqliteConnection = sqlite3.connect("/Users/dineshmk/airflow_learning/db/airflow.db")
+try:    
+        home_dir = os.environ['AIRFLOW_HOME']
+        path = home_dir + ("/db/airflow.db")
+        path = path.replace("/","//")
+        sqliteConnection = sqlite3.connect(path)
         cursor = sqliteConnection.cursor()
         print("Database created and Successfully Connected to SQLite")
         sqlite_select_Query = "select sqlite_version();"

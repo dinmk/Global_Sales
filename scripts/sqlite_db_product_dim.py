@@ -1,10 +1,12 @@
 #Author : Dinesh Murugesan (dinesh714@gmail.com)
 # This Script is to load staging table to Final table for reporting.
 # Also view creation for extreme reporting
-
+import os
 import sqlite3
-
-con = sqlite3.connect('/Users/dineshmk/airflow_learning/db/airflow.db')
+home_dir = os.environ['AIRFLOW_HOME']
+path = home_dir + ("/db/airflow.db")
+path = path.replace("/","//")
+con = sqlite3.connect(path)
 cur = con.cursor()
 cur.execute("""CREATE TABLE IF NOT EXISTS tbl_dw_product_dim(
         tbl_dw_product_dim_product_id               varchar PRIMARY KEY,

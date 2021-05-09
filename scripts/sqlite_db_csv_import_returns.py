@@ -6,7 +6,10 @@ import os
 import sqlite3
 import csv
 
-con = sqlite3.connect('/Users/dineshmk/airflow_learning/db/airflow.db')
+home_dir = os.environ['AIRFLOW_HOME']
+path = home_dir + ("/db/airflow.db")
+path = path.replace("/","//")
+con = sqlite3.connect(path)
 cur = con.cursor()
 
 

@@ -1,9 +1,11 @@
+import os
 import sqlite3
 from sqlite3 import Error
 import pandas as pd
 
-DB_FILE_PATH ='/Users/dineshmk/airflow_learning/db/airflow.db'
-XL_FILE_PATH = '/Users/dineshmk/airflow_learning/data/Global_Superstore_Orders_2016.xlsx'
+home_dir = os.environ['AIRFLOW_HOME']
+DB_FILE_PATH = home_dir + ("/db/airflow.db")
+XL_FILE_PATH = home_dir + ("/data/Global_Superstore_Orders_2016.xlsx")
 
 
 def connect_to_db(db_file):
