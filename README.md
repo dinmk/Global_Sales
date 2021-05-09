@@ -38,8 +38,6 @@ Task Instance — stored state of a task.
 <a name="dag"/>
 [9. Report Generation](#report)  
 <a name="report"/>
-[10. Conclusion](#conc)  
-<a name="conc"/>
 
 ## Getting Started
 
@@ -118,32 +116,32 @@ run airflow initdb
 Follow these steps to install Airflow on Mac.  
 
 
-1. Open a Terminal window.  
+Step 1: Open a Terminal window.  
 Navigate to your Desktop in your Terminal. 
 
-2. We are going to create a working directory here but you can create anywhere else in your file system if you like.
+Step 2: We are going to create a working directory here but you can create anywhere else in your file system if you like.
 cd Desktop.  
 
-3. Create a working directory here called airflow_learning.  
+Step 3: Create a working directory here called airflow_learning.  
 mkdir airflow_learning  
 
-4. Change to airflow-tutorial directory in your Terminal.  
+Step 4: Change to airflow-tutorial directory in your Terminal.  
 cd airflow_learning  
 
-5. Create a virtual environment using coda (or any other tool). Install Python 3.7 in your virtual environment. I’m going to call the environment airflow-tutorial.  
+Step 5: Create a virtual environment using coda (or any other tool). Install Python 3.7 in your virtual environment. I’m going to call the environment airflow-tutorial.  
 conda create --name airflow_learning python=3.7  
 
-6. Activate the virtual environment.  
+Step 6: Activate the virtual environment.  
 conda activate airflow_learning  
 
-7. Print the absolute path to your working directory by typing pwd.  
+Step 7: Print the absolute path to your working directory by typing pwd.  
 I get /Users/dineshmk/airflow_learning but you might get something different. Copy this path  
 
-8. Set the path as the AIRFLOW_HOME environment variable. Note that you have to do this every time you open a new Terminal window and wish to use the Airflow CLI. Alternatively, you can set a permanent environment variable in your bash_profile.  
+Step 8: Set the path as the AIRFLOW_HOME environment variable. Note that you have to do this every time you open a new Terminal window and wish to use the Airflow CLI. Alternatively, you can set a permanent environment variable in your bash_profile.  
 export AIRFLOW_HOME=/Users/dineshmk/airflow_learning  
 By default, airflow uses ~/airflow as it’s AIRFLOW_HOME directory. We can overwrite this by setting a different path. Airflow will initialize the airflow.cfg file here along with the logs folder. We’ll store our dags and plugins in this directory.  
 
-9. Install Airflow 1.10.10 + extras using pip  
+Step 9: Install Airflow 1.10.10 + extras using pip  
 pip install apache-airflow[gcp,statsd,sentry]==1.10.10  
 If you’re using zsh like me then you need to put apache-airflow[gcp,statsd,sentry] in quotes as shown below.  
 pip install 'apache-airflow[gcp,statsd,sentry]'==1.10.10  
@@ -186,4 +184,5 @@ Click on Trigger DAG in the Airflow webserver  & click on the Tree view to see t
 <img width="1306" alt="Screenshot 2021-05-09 at 11 33 26" src="https://user-images.githubusercontent.com/61795377/117567054-7186d700-b0ba-11eb-818b-2c1b98b964ae.png">
 
 ## Report Generation
-## Conclusion
+
+Required Reporting needs scripts are triggerred at the last can be querried from Sqlite DB browser.
