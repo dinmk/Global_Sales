@@ -74,6 +74,17 @@ Pycharm
 ## Installation setup in Mac/Windows
 ## Startup Scripts
 ## Global Store source code
+
+The Source code start from DAG folder - Dependencies are set here 
+Which triggers the following  
+
+DB Creation Setup : sqlite_db_script.py  
+Import from Source (CSV,XLSX) to Staging table : sqlite_db_csv_import_returns.py,sqlite_db_xlsx_import_orders.py & sqlite_db_xlsx_import_people.py  
+Dimension Load : sqlite_db_customer_dim.py,sqlite_db_date_dim,sqlite_db_product_dim,sqlite_db_people_dim,sqlite_db_market_dim.py  
+Fact Sales : sqlite_db_fact.py,sqlite_db_report.py  
+Reporting Load : sqlite_db_report.py  
+
+
 ## Data Modelling Overview
 
 High Level View.  
