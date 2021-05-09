@@ -11,6 +11,14 @@ When workflows are defined as code, they become more maintainable, versionable, 
 
 Use Airflow to author workflows as directed acyclic graphs (DAGs) of tasks. The Airflow scheduler executes your tasks on an array of workers while following the specified dependencies. Rich command line utilities make performing complex surgeries on DAGs a snap. The rich user interface makes it easy to visualize pipelines running in production, monitor progress, and troubleshoot issues when needed.
 
+DAG — directed acyclic graph. How to run a workflow, visible in the dashboard on the web interface.  
+Worker — one or more systems responsible for running the code in the workflow task queues.  
+Webserver — displays UI for managing Airflow, manages user requests for running tasks, and receives updates from DAG runs via workers  
+Scheduler — determines if a Task needs to be run and triggers work to be processed by a Worker  
+Operator — a step of what actually gets run inside a DAG  
+Task — an instantiated Operator created by the scheduler, a single unit of work  
+Task Instance — stored state of a task.  
+
 ## Table of contents 
 [1. Getting Started](#gettingstarted)  
 <a name="gettingstarted"/>
@@ -50,6 +58,7 @@ Architecture is quite simple – We have all our script written in python to loa
 file into SQLite DB . We have assumed to run this architecture in our Local machine
 Below architecture diagram describes the simple usage. 
 
+<img width="677" alt="Screenshot 2021-05-09 at 11 26 48" src="https://user-images.githubusercontent.com/61795377/117566887-7f882800-b0b9-11eb-958b-b51c1e3edea7.png">
 
 
 ## Tools and Technologies used
@@ -66,6 +75,21 @@ Pycharm
 ## Startup Scripts
 ## Global Store source code
 ## Data Modelling Overview
+
+High Level View.  
+
+<img width="616" alt="Screenshot 2021-05-09 at 11 35 37" src="https://user-images.githubusercontent.com/61795377/117567098-b0b52800-b0ba-11eb-9bb6-17c0d257c24b.png">
+
+Data Model.  
+
+<img width="1125" alt="Screenshot 2021-05-09 at 11 31 20" src="https://user-images.githubusercontent.com/61795377/117567000-31275900-b0ba-11eb-9ff0-1f1678dfaa25.png">
+
+
 ## Running DAG
+
+Click on Trigger DAG in the Airflow webserver  & click on the Tree view to see the Success and failure process.  
+
+<img width="1306" alt="Screenshot 2021-05-09 at 11 33 26" src="https://user-images.githubusercontent.com/61795377/117567054-7186d700-b0ba-11eb-818b-2c1b98b964ae.png">
+
 ## Report Generation
 ## Conclusion
