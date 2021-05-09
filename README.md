@@ -74,6 +74,82 @@ Atom - Editor
 Pycharm   
 
 ## Installation setup in Mac/Windows
+
+Step to install airflow on windows without Docker
+
+Step 1: Control Panel | Programs and Features | Turn Windows features on or off
+
+Enable : Windows Subsystem for Linux
+
+Step 2: Install Ubuntu from windows store and restart system
+
+Step 3: Install and update PIP
+
+sudo apt-get install software-properties-common
+sudo apt-add-repository universe
+sudo apt-get update
+sudo apt-get install python-pip
+
+Step 4: Install airflow 
+
+Note:
+if above command doesn't work use below
+python3 -m pip install apache-airflow
+
+export SLUGIFY_USES_TEXT_UNIDECODE=yes
+pip install apache-airflow
+
+Step 5: Initialize DB 
+airflow initdb
+
+Step 6: Start airflow server
+airflow webserver -p 8080
+
+Step 7: URL is ready : http://localhost:8080/​
+
+Step 8: Setup folder for DAG
+
+create folder DAG in C: drive (C:\DAG)
+
+Step 9: Add new DAG 
+
+run airflow initdb
+
+Follow these steps to install Airflow on Mac.  
+
+
+1. Open a Terminal window.  
+Navigate to your Desktop in your Terminal. 
+
+2. We are going to create a working directory here but you can create anywhere else in your file system if you like.
+cd Desktop.  
+
+3. Create a working directory here called airflow_learning.  
+mkdir airflow_learning  
+
+4. Change to airflow-tutorial directory in your Terminal.  
+cd airflow_learning  
+
+5. Create a virtual environment using coda (or any other tool). Install Python 3.7 in your virtual environment. I’m going to call the environment airflow-tutorial.  
+conda create --name airflow_learning python=3.7  
+
+6. Activate the virtual environment.  
+conda activate airflow_learning  
+
+7. Print the absolute path to your working directory by typing pwd.  
+I get /Users/dineshmk/airflow_learning but you might get something different. Copy this path  
+
+8. Set the path as the AIRFLOW_HOME environment variable. Note that you have to do this every time you open a new Terminal window and wish to use the Airflow CLI. Alternatively, you can set a permanent environment variable in your bash_profile.  
+export AIRFLOW_HOME=/Users/dineshmk/airflow_learning  
+By default, airflow uses ~/airflow as it’s AIRFLOW_HOME directory. We can overwrite this by setting a different path. Airflow will initialize the airflow.cfg file here along with the logs folder. We’ll store our dags and plugins in this directory.  
+
+9. Install Airflow 1.10.10 + extras using pip  
+pip install apache-airflow[gcp,statsd,sentry]==1.10.10  
+If you’re using zsh like me then you need to put apache-airflow[gcp,statsd,sentry] in quotes as shown below.  
+pip install 'apache-airflow[gcp,statsd,sentry]'==1.10.10  
+
+
+
 ## Startup Scripts
 ## Global Store source code
 
