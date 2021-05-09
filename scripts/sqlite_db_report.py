@@ -133,7 +133,7 @@ select C.tbl_dw_date_dim_year,B.tbl_dw_market_dim_state,sum((((tbl_dw_fact_sales
                     where A.tbl_dw_fact_sales_market_key= B.tbl_dw_market_dim_market_key
                     and A.tbl_dw_fact_sales_return_flag = 'No'
                     and A.tbl_dw_fact_sales_order_date = C.tbl_dw_date_dim_calendar_date
-                    and C.tbl_dw_date_dim_year=strftime('%Y', datetime('now'))-8
+                    and C.tbl_dw_date_dim_year=strftime('%Y', datetime('now'))-1
                     group  by C.tbl_dw_date_dim_year,B.tbl_dw_market_dim_state;""")
 
 
@@ -180,7 +180,7 @@ cur.execute("""select B.tbl_dw_product_dim_category,sum(A.tbl_dw_fact_sales_pric
         where A.tbl_dw_fact_sales_return_flag = 'No'
 		 and A.tbl_dw_fact_sales_product_id = B.tbl_dw_product_dim_product_id
           and A.tbl_dw_fact_sales_order_date = C.tbl_dw_date_dim_calendar_date
-          and C.tbl_dw_date_dim_year=strftime('%Y', datetime('now'))-8
+          and C.tbl_dw_date_dim_year=strftime('%Y', datetime('now'))-1
    group by B.tbl_dw_product_dim_category;""")
 
 
