@@ -2,9 +2,13 @@ name: flake8 Lint
 
 on:
   push:
-    branches: [main,test]
+    branches:
+      - main
+      - test 
   pull_request:
-  
+    branches:
+      - main
+      - test      
 jobs:
   flake8-lint:
     runs-on: ubuntu-latest
