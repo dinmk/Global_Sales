@@ -2,6 +2,7 @@
 # This Script is to setup Dag for ETL process
 
 
+
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.bash_operator import BashOperator
