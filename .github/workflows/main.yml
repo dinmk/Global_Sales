@@ -1,4 +1,4 @@
-name: Python
+name: flake8 Lint
 
 on:
   push:
@@ -6,19 +6,17 @@ on:
   pull_request:
 
 jobs:
-  flake8:
+  flake8-lint:
     runs-on: ubuntu-latest
+    name: Lint
     steps:
-      - name: Checkout
+      - name: Check out source repository
         uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4.1.0
+      - name: Set up Python environment
+        uses: actions/setup-python@v4
         with:
-          python-version: 3
-
-      - name: Install flake8
-        run: pip --disable-pip-version-check install flake8
-
-      - name: Lint with flake8
-        run: flake8 --count
+          python-version: "3.11"
+      - name: flake8 Lint
+        uses: py-actions/flake8@v2
+        with:
+          exclude: "data/*"
