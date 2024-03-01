@@ -1,14 +1,6 @@
 name: flake8 Lint
 
-on:
-  push:
-    branches:
-      - test
-      - main
-  pull_request:
-    branches:
-      - test
-      - main
+on: [push, pull_request]
 
 jobs:
   flake8-lint:
