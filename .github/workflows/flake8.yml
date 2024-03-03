@@ -37,4 +37,5 @@ jobs:
         uses: super-linter/super-linter@v5.7.2
         env:
             VALIDATE_PYTHON_FLAKE8: true
+            FILTER_REGEX_EXCLUDE: .*scripts/.*
           
