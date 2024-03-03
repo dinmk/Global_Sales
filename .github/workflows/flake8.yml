@@ -1,0 +1,42 @@
+---
+#################################
+#################################
+## Super Linter GitHub Actions ##
+#################################
+#################################
+name: Lint Code Base
+
+#############################
+# Start the job on all push #
+#############################
+on:
+    # Remove the line above to run when pushing to master
+  pull_request:
+    branches: [master, main, test]
+
+###############
+# Set the Job #
+###############
+jobs:
+  build:
+    # Name the Job
+    name: Lint Code Base
+    # Set the agent to run on
+    runs-on: ubuntu-latest
+
+    ##################
+    # Load all steps #
+    ##################
+    steps:
+      ##########################
+      # Checkout the code base #
+      ##########################
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Super-Linter
+        uses: super-linter/super-linter@v5.7.2
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            VALIDATE_PYTHON_FLAKE8: true
+            FILTER_REGEX_EXCLUDE: .*scripts/.*
+          
